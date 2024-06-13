@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: aeroblue
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Five hundred aeros
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -27,6 +27,9 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  - type: bling
+    install:
+        - ublue-update
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
