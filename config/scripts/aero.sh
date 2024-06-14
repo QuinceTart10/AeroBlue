@@ -8,6 +8,9 @@ set -oue pipefail
 # Clone the repo
 git clone https://gitgud.io/wackyideas/aerothemeplasma-kde6.git /tmp/atp
 
+# Extract the global theme
+tar -xzf /tmp/atp/Plasma_Style/Seven-Black.tar.gz -C /usr/share/plasma/desktoptheme
+
 # Extract the icon themes
 tar -xzf /tmp/atp/Icons_and_cursors/icon_themes.tar.gz -C /usr/share/icons windowsicon/
 tar -xzf /tmp/atp/Icons_and_cursors/aero-drop.tar.gz -C /usr/share/icons
