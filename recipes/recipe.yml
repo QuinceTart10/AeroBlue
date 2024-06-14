@@ -30,6 +30,12 @@ modules:
   - type: bling
     install:
         - ublue-update
+  - type: script
+    snippets:
+      # - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
+      # - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
+    scripts:
+      - aero.sh
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
