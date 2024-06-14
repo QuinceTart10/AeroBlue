@@ -14,3 +14,7 @@ tar -xzf /tmp/atp/Plasma_Style/Seven-Black.tar.gz -C /usr/share/plasma/desktopth
 # Extract the icon themes
 tar -xzf /tmp/atp/Icons_and_cursors/icon_themes.tar.gz -C /usr/share/icons windowsicon/
 tar -xzf /tmp/atp/Icons_and_cursors/aero-drop.tar.gz -C /usr/share/icons
+
+# Extract the Plymouth theme
+unzip /tmp/atp/skibidithemeplasma/plymouth-theme-skibidithemeplasma.zip -d /usr/share/plymouth/themes
+mv /usr/share/plymouth/themes/plymouth-theme-skibidithemeplasma /usr/share/plymouth/themes/skibidithemeplasma
