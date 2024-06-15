@@ -2,5 +2,5 @@
 
 set -euo pipefail
 
-rm -rf /etc
+rm -rf /etc/plymouth
 rm -rf /tmp/atp
