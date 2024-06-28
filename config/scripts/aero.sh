@@ -19,6 +19,9 @@ tar -xzf /tmp/atp/Icons_and_cursors/aero-drop.tar.gz -C /usr/share/icons
 mv /tmp/atp/Kvantum/Windows7Kvantum_Aero /usr/share/Kvantum/Windows7Kvantum_Aero
 mv /tmp/atp/AeroColorScheme1.colors /usr/share/color-schemes/AeroColorScheme1.colors
 
+# Extract the SDDM theme
+tar -xzf /tmp/atp/SDDM/sddm-theme-mod.tar.gz -C /usr/share/sddm/themes
+
 # Extract the Plymouth theme
 unzip /tmp/atp/skibidithemeplasma/plymouth-theme-skibidithemeplasma.zip -d /usr/share/plymouth/themes
 mv /usr/share/plymouth/themes/plymouth-theme-skibidithemeplasma /usr/share/plymouth/themes/skibidithemeplasma
