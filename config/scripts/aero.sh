@@ -16,7 +16,7 @@ tar -xzf /tmp/atp/Icons_and_cursors/icon_themes.tar.gz -C /usr/share/icons windo
 tar -xzf /tmp/atp/Icons_and_cursors/aero-drop.tar.gz -C /usr/share/icons
 
 # Move the Kvantum theme
-mv /tmp/atp/Kvantum/Windows7Kvantum_Aero/usr/share/Kvantum/Windows7Kvantum_Aero
+mv /tmp/atp/Kvantum/Windows7Kvantum_Aero /usr/share/Kvantum/Windows7Kvantum_Aero
 
 # Extract the Plymouth theme
 unzip /tmp/atp/skibidithemeplasma/plymouth-theme-skibidithemeplasma.zip -d /usr/share/plymouth/themes
