@@ -39,8 +39,14 @@ modules:
       # - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
     scripts:
       - aero.sh
+      - plymouth.sh
       - initramfs.sh
       - cleanup.sh
+  - type: systemd
+    system:
+      enabled:
+        - smod-plymouth-wait-for-animation.service
+        - smod-plymouth-wait-for-animation-poweroff.service
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)

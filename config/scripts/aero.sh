@@ -21,7 +21,3 @@ mv /tmp/atp/AeroColorScheme1.colors /usr/share/color-schemes/AeroColorScheme1.co
 
 # Extract the SDDM theme
 tar -xzf /tmp/atp/SDDM/sddm-theme-mod.tar.gz -C /usr/share/sddm/themes
-
-# Extract the Plymouth theme
-unzip /tmp/atp/Plymouth/plymouth-theme-smod.zip -d /usr/share/plymouth/themes
-mv /usr/share/plymouth/themes/plymouth-theme-smod /usr/share/plymouth/themes/smod
