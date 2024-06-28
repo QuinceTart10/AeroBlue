@@ -6,6 +6,7 @@ set -euo pipefail
 unzip /tmp/atp/Plymouth/plymouth-theme-smod.zip -d /tmp/atp/Plymouth
 
 # Set envvars
+export PLYMOUTH_THEME_INSTALL_DIR=/usr/share/plymouth/themes
 export BOOT_ANIM_START_DELAY=2
 export BOOT_PROGRESS_CLEAR=0.99
 export SMOD_WAIT_BOOT=6
