@@ -41,7 +41,6 @@ modules:
       - aero.sh
       - plymouth.sh
       - initramfs.sh
-      # - cleanup.sh
   - type: systemd
     system:
       enabled:
