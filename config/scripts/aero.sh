@@ -47,3 +47,7 @@ mv /tmp/atp/KWin/js_effects/squash /usr/share/kwin/effects/squash
 
 # Extract the tabbox theme
 tar -xzf /tmp/atp/KWin/tabbox/thumbnail_seven.tar.gz -C /usr/share/kwin/tabbox
+
+# Replace the KWin outline
+rm -r /usr/share/kwin/outline
+tar -xzf /tmp/atp/KWin/outline/outline.tar.gz -C /usr/share/kwin
