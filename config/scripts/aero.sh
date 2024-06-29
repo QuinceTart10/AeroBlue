@@ -32,3 +32,15 @@ tar -xzf /tmp/atp/Plasmoids/io.gitgud.wackyideas.win7showdesktop.tar.gz -C /usr/
 tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.keyboardlayout.tar.gz -C /usr/share/plasma/plasmoids
 tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.notifications.tar.gz -C /usr/share/plasma/plasmoids
 tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.private.systemtray.tar.gz -C /usr/share/plasma/plasmoids
+
+# Remove effects that will be replaces with modified versions
+rm -r /usr/share/kwin/effects/fadingpopups
+rm -r /usr/share/kwin/effects/morphingpopups
+rm -r /usr/share/kwin/effects/scale
+rm -r /usr/share/kwin/effects/squash
+
+# Move the new JavaScript effects
+mv /tmp/atp/KWin/js_effects/fadingpopups /usr/share/kwin/effects/fadingpopups
+mv /tmp/atp/KWin/js_effects/morphingpopups /usr/share/kwin/effects/morphingpopups
+mv /tmp/atp/KWin/js_effects/scale /usr/share/kwin/effects/scale
+mv /tmp/atp/KWin/js_effects/squash /usr/share/kwin/effects/squash
