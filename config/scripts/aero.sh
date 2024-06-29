@@ -44,3 +44,6 @@ mv /tmp/atp/KWin/js_effects/fadingpopups /usr/share/kwin/effects/fadingpopups
 mv /tmp/atp/KWin/js_effects/morphingpopups /usr/share/kwin/effects/morphingpopups
 mv /tmp/atp/KWin/js_effects/scale /usr/share/kwin/effects/scale
 mv /tmp/atp/KWin/js_effects/squash /usr/share/kwin/effects/squash
+
+# Extract the tabbox theme
+tar -xzf /tmp/atp/KWin/tabbox/thumbnail_seven.tar.gz -C /usr/share/kwin/tabbox
