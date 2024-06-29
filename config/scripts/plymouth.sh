@@ -26,3 +26,6 @@ mv /tmp/atp/Plymouth/plymouth-theme-smod/smod.script /usr/share/plymouth/themes/
 mv /tmp/atp/Plymouth/plymouth-theme-smod/assets /usr/share/plymouth/themes/smod/assets
 mv /tmp/atp/Plymouth/plymouth-theme-smod/smod-plymouth-wait-for-animation.service /usr/lib/systemd/system/smod-plymouth-wait-for-animation.service
 mv /tmp/atp/Plymouth/plymouth-theme-smod/smod-plymouth-wait-for-animation-poweroff.service /usr/lib/systemd/system/smod-plymouth-wait-for-animation-poweroff.service
+
+# Copy the Windows 7 Professional branding to the SDDM theme for consistency
+cp /usr/share/plymouth/themes/smod/assets/branding-white.png /usr/share/sddm/themes/sddm-theme-mod/Assets/branding-white.png
