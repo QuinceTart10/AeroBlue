@@ -21,3 +21,14 @@ mv /tmp/atp/AeroColorScheme1.colors /usr/share/color-schemes/AeroColorScheme1.co
 
 # Extract the SDDM theme
 tar -xzf /tmp/atp/SDDM/sddm-theme-mod.tar.gz -C /usr/share/sddm/themes
+
+# Remove Plasmoids that will be replaced with modified versions
+rm -r /usr/share/plasma/plasmoids/org.kde.plasma.keyboardlayout
+rm -r /usr/share/plasma/plasmoids/org.kde.plasma.notifications
+rm -r /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray
+
+# Extract the new plasmoids
+tar -xzf /tmp/atp/Plasmoids/io.gitgud.wackyideas.win7showdesktop.tar.gz -C /usr/share/plasma/plasmoids
+tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.keyboardlayout.tar.gz -C /usr/share/plasma/plasmoids
+tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.notifications.tar.gz -C /usr/share/plasma/plasmoids
+tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.private.systemtray.tar.gz -C /usr/share/plasma/plasmoids
