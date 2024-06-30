@@ -5,7 +5,7 @@ set -euo pipefail
 rpm-ostree install cmake gcc
 
 cd /tmp/atp/KWin/cpp_effects/kwin-effect-smodsnap-v2
-cmake -B build-kf6 -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DBUILD_KF6=ON .
+cmake -B build-kf6 -DCMAKE_CXX_COMPILER=/usr/bin/gcc -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DBUILD_KF6=ON .
 make -C build-kf6
 make -C build-kf6 install
 
