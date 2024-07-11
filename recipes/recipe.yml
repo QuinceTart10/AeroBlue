@@ -7,6 +7,14 @@ description: Five hundred aeros
 base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 40 # latest is also supported if you want new updates ASAP
 
+stages:
+  - name: forceblur
+    from: registry.fedoraproject.org/fedora:40
+    modules:
+      - type: script
+        scripts:
+          - forceblur.sh
+
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
