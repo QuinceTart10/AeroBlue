@@ -54,6 +54,14 @@ modules:
       enabled:
         - smod-plymouth-wait-for-animation.service
         - smod-plymouth-wait-for-animation-poweroff.service
+  - type: copy
+    from: forceblur
+    src: /tmp/forceblur/build/src/forceblur.so
+    out: /usr/lib64/qt6/plugins/kwin/effects/plugins/
+  - type: copy
+    from: forceblur
+    src: /tmp/forceblur/build/src/kcm/kwin_forceblur_config.so
+    out: /usr/lib64/qt6/plugins/kwin/effects/configs/
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
