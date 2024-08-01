@@ -8,3 +8,4 @@ mkdir /tmp/forceblur/build
 cd /tmp/forceblur/build
 cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
 make
+make install
