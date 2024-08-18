@@ -9,3 +9,6 @@ cd /tmp/forceblur/build
 cmake ../ -DCMAKE_INSTALL_PREFIX=/usr
 make
 make install
+
+# Remove devel packages (I hope)
+rpm-ostree uninstall gc gcc gcc-c++ make cmake cmake-data extra-cmake-modules clang-libs clang-resource-filesystem $(rpm -qa | grep devel) $(rpm -qa | grep headers)
