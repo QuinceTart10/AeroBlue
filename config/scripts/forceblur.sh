@@ -11,4 +11,4 @@ make
 make install
 
 # Remove devel packages (I hope)
-rpm-ostree uninstall gc gcc gcc-c++ make cmake cmake-data extra-cmake-modules clang-libs clang-resource-filesystem compiler-rt guile30 qt6-rpm-macros kf6-rpm-macros qt6-linguist $(rpm -qa | grep devel) $(rpm -qa | grep headers)
+rpm-ostree uninstall gc gcc gcc-c++ make cmake cmake-data extra-cmake-modules clang-libs clang-resource-filesystem compiler-rt guile30 qt6-rpm-macros kf6-rpm-macros qt6-linguist qt6-designer qt6-doctools qt6-qtlanguageserver $(rpm -qa | grep devel) $(rpm -qa | grep headers)
