@@ -46,3 +46,18 @@ rm -rf /usr/share/kwin/outline/plasma
 mv /tmp/atp/kwin/outline/plasma /usr/share/kwin/outline/plasma
 mv /tmp/atp/kwin/scripts/smodpeekscript /usr/share/kwin/scripts/smodpeekscript
 mv /tmp/atp/kwin/tabbox/thumbnail_seven /usr/share/kwin/tabbox/thumbnail_seven
+
+# Old effect removal (i gave up making the comments)
+rm -rf /usr/share/kwin/effects/fadingpopups
+rm -rf /usr/share/kwin/effects/login
+rm -rf /usr/share/kwin/effects/morphingpopups
+rm -rf /usr/share/kwin/effects/scale
+rm -rf /usr/share/kwin/effects/squash
+
+# Move effects
+mv /tmp/atp/kwin/effects/fadingpopups /usr/share/kwin/effects/fadingpopups
+mv /tmp/atp/kwin/effects/login /usr/share/kwin/effects/login
+mv /tmp/atp/kwin/effects/morphingpopups /usr/share/kwin/effects/morphingpopups
+mv /tmp/atp/kwin/effects/scale /usr/share/kwin/effects/scale
+mv /tmp/atp/kwin/effects/smodpeekeffect /usr/share/kwin/effects/smodpeekeffect
+mv /tmp/atp/kwin/effects/squash /usr/share/kwin/effects/squash
