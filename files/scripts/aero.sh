@@ -18,3 +18,25 @@ mv /tmp/atp/plasma/smod /usr/share/smod
 # Shell replacement
 rm -rf /usr/share/plasma/shells/org.kde.plasma.desktop
 mv /tmp/atp/plasma/shells/org.kde.plasma.desktop /usr/share/plasma/shells/org.kde.plasma.desktop
+
+# Remove plasmoids that will be replaced
+rm -rf /usr/share/plasma/plasmoids/org.kde.desktopcontainment
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.battery
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.keyboardlayout
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.networkmanagement
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.notifications
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.volume
+
+# Move plasmoids
+mv /tmp/atp/plasma/plasmoids/bin /usr/share/plasma/plasmoids/bin
+mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.SevenStart /usr/share/plasma/plasmoids/io.gitgud.wackyideas.SevenStart
+mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.digitalclocklite /usr/share/plasma/plasmoids/io.gitgud.wackyideas.digitalclocklite
+mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.win7showdesktop /usr/share/plasma/plasmoids/io.gitgud.wackyideas.win7showdesktop
+mv /tmp/atp/plasma/plasmoids/org.kde.desktopcontainment /usr/share/plasma/plasmoids/org.kde.desktopcontainment
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.battery /usr/share/plasma/plasmoids/org.kde.plasma.battery
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.keyboardlayout /usr/share/plasma/plasmoids/org.kde.plasma.keyboardlayout
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.networkmanagement /usr/share/plasma/plasmoids/org.kde.plasma.networkmanagement
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.notifications /usr/share/plasma/plasmoids/org.kde.plasma.notifications
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.private.systemtray /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.volume /usr/share/plasma/plasmoids/org.kde.plasma.volume
