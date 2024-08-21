@@ -28,4 +28,4 @@ mv /tmp/atp/misc/plymouth/plymouth-theme-smod/smod-plymouth-wait-for-animation-p
 cp /usr/share/plymouth/themes/smod/assets/branding-white.png /usr/share/sddm/themes/sddm-theme-mod/Assets/branding-white.png
 
 # Change the Plymouth theme
-sed -i "s|Theme=bgrt|Theme=smod" /usr/share/plymouth/plymouthd.defaults
+sed -i "s|Theme=bgrt|Theme=smod|" /usr/share/plymouth/plymouthd.defaults
