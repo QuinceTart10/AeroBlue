@@ -7,3 +7,10 @@ set -oue pipefail
 
 # Clone the repo
 git clone https://gitgud.io/wackyideas/aerothemeplasma.git /tmp/atp
+
+# Move stuff
+mv /tmp/atp/plasma/color_scheme/AeroColorScheme1.colors /usr/share/color-schemes/AeroColorScheme1.colors
+mv /tmp/atp/plasma/desktoptheme/Seven-Black /usr/share/plasma/desktoptheme/Seven-Black
+mv /tmp/atp/plasma/look-and-feel/authui7 /usr/share/plasma/look-and-feel/authui7
+mv /tmp/atp/plasma/sddm/sddm-theme-mod /usr/share/sddm/themes/sddm-theme-mod
+mv /tmp/atp/plasma/smod /usr/share/smod
