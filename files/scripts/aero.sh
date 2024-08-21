@@ -40,3 +40,9 @@ mv /tmp/atp/plasma/plasmoids/org.kde.plasma.networkmanagement /usr/share/plasma/
 mv /tmp/atp/plasma/plasmoids/org.kde.plasma.notifications /usr/share/plasma/plasmoids/org.kde.plasma.notifications
 mv /tmp/atp/plasma/plasmoids/org.kde.plasma.private.systemtray /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray
 mv /tmp/atp/plasma/plasmoids/org.kde.plasma.volume /usr/share/plasma/plasmoids/org.kde.plasma.volume
+
+# KWin stuff
+rm -rf /usr/share/kwin/outline/plasma
+mv /tmp/atp/kwin/outline/plasma /usr/share/kwin/outline/plasma
+mv /tmp/atp/kwin/scripts/smodpeekscript /usr/share/kwin/scripts/smodpeekscript
+mv /tmp/atp/kwin/tabbox/thumbnail_seven /usr/share/kwin/tabbox/thumbnail_seven
