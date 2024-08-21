@@ -27,6 +27,7 @@ mv /tmp/atp/misc/plymouth/plymouth-theme-smod/smod-plymouth-wait-for-animation-p
 # Copy the Windows 7 Professional branding to the SDDM theme and Plasma splash screen for consistency
 cp /usr/share/plymouth/themes/smod/assets/branding-white.png /usr/share/sddm/themes/sddm-theme-mod/Assets/branding-white.png
 cp /usr/share/plymouth/themes/smod/assets/branding-white.png /usr/share/plasma/look-and-feel/authui7/contents/images/watermark.png
+cp /usr/share/plymouth/themes/smod/assets/branding-white.png /usr/share/plasma/shells/org.kde.plasma.desktop/contents/images/watermark.png
 
 # Change the Plymouth theme
 sed -i "s|Theme=bgrt|Theme=smod|" /usr/share/plymouth/plymouthd.defaults
