@@ -6,48 +6,64 @@
 set -oue pipefail
 
 # Clone the repo
-git clone https://gitgud.io/wackyideas/aerothemeplasma-kde6.git /tmp/atp
+git clone https://gitgud.io/wackyideas/aerothemeplasma.git /tmp/atp
 
-# Extract the global theme
-tar -xzf /tmp/atp/Plasma_Style/Seven-Black.tar.gz -C /usr/share/plasma/desktoptheme
+# Move stuff
+mv /tmp/atp/plasma/color_scheme/AeroColorScheme1.colors /usr/share/color-schemes/AeroColorScheme1.colors
+mv /tmp/atp/plasma/desktoptheme/Seven-Black /usr/share/plasma/desktoptheme/Seven-Black
+mv /tmp/atp/plasma/look-and-feel/authui7 /usr/share/plasma/look-and-feel/authui7
+mv /tmp/atp/plasma/sddm/sddm-theme-mod /usr/share/sddm/themes/sddm-theme-mod
+mv /tmp/atp/plasma/smod /usr/share/smod
 
-# Extract the icon themes
-tar -xzf /tmp/atp/Icons_and_cursors/icon_themes.tar.gz -C /usr/share/icons windowsicon/
-tar -xzf /tmp/atp/Icons_and_cursors/aero-drop.tar.gz -C /usr/share/icons
+# Shell replacement
+rm -rf /usr/share/plasma/shells/org.kde.plasma.desktop
+mv /tmp/atp/plasma/shells/org.kde.plasma.desktop /usr/share/plasma/shells/org.kde.plasma.desktop
 
-# Move the Kvantum theme and color scheme
-mv /tmp/atp/Kvantum/Windows7Kvantum_Aero /usr/share/Kvantum/Windows7Kvantum_Aero
-mv /tmp/atp/AeroColorScheme1.colors /usr/share/color-schemes/AeroColorScheme1.colors
+# Remove plasmoids that will be replaced
+rm -rf /usr/share/plasma/plasmoids/org.kde.desktopcontainment
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.battery
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.keyboardlayout
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.networkmanagement
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.notifications
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray
+rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.volume
 
-# Extract the SDDM theme
-tar -xzf /tmp/atp/SDDM/sddm-theme-mod.tar.gz -C /usr/share/sddm/themes
+# Move plasmoids
+mv /tmp/atp/plasma/plasmoids/bin /usr/share/plasma/plasmoids/bin
+mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.SevenStart /usr/share/plasma/plasmoids/io.gitgud.wackyideas.SevenStart
+mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.digitalclocklite /usr/share/plasma/plasmoids/io.gitgud.wackyideas.digitalclocklite
+mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.win7showdesktop /usr/share/plasma/plasmoids/io.gitgud.wackyideas.win7showdesktop
+mv /tmp/atp/plasma/plasmoids/org.kde.desktopcontainment /usr/share/plasma/plasmoids/org.kde.desktopcontainment
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.battery /usr/share/plasma/plasmoids/org.kde.plasma.battery
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.keyboardlayout /usr/share/plasma/plasmoids/org.kde.plasma.keyboardlayout
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.networkmanagement /usr/share/plasma/plasmoids/org.kde.plasma.networkmanagement
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.notifications /usr/share/plasma/plasmoids/org.kde.plasma.notifications
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.private.systemtray /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray
+mv /tmp/atp/plasma/plasmoids/org.kde.plasma.volume /usr/share/plasma/plasmoids/org.kde.plasma.volume
 
-# Remove Plasmoids that will be replaced with modified versions
-rm -r /usr/share/plasma/plasmoids/org.kde.plasma.keyboardlayout
-rm -r /usr/share/plasma/plasmoids/org.kde.plasma.notifications
-rm -r /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray
+# KWin stuff
+rm -rf /usr/share/kwin/outline/plasma
+mv /tmp/atp/kwin/outline/plasma /usr/share/kwin/outline/plasma
+mv /tmp/atp/kwin/scripts/smodpeekscript /usr/share/kwin/scripts/smodpeekscript
+mv /tmp/atp/kwin/tabbox/thumbnail_seven /usr/share/kwin/tabbox/thumbnail_seven
 
-# Extract the new plasmoids
-tar -xzf /tmp/atp/Plasmoids/io.gitgud.wackyideas.win7showdesktop.tar.gz -C /usr/share/plasma/plasmoids
-tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.keyboardlayout.tar.gz -C /usr/share/plasma/plasmoids
-tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.notifications.tar.gz -C /usr/share/plasma/plasmoids
-tar -xzf /tmp/atp/Plasmoids/org.kde.plasma.private.systemtray.tar.gz -C /usr/share/plasma/plasmoids
+# Old effect removal (i gave up making the comments)
+rm -rf /usr/share/kwin/effects/fadingpopups
+rm -rf /usr/share/kwin/effects/login
+rm -rf /usr/share/kwin/effects/morphingpopups
+rm -rf /usr/share/kwin/effects/scale
+rm -rf /usr/share/kwin/effects/squash
 
-# Remove effects that will be replaces with modified versions
-rm -r /usr/share/kwin/effects/fadingpopups
-rm -r /usr/share/kwin/effects/morphingpopups
-rm -r /usr/share/kwin/effects/scale
-rm -r /usr/share/kwin/effects/squash
+# Move effects
+mv /tmp/atp/kwin/effects/fadingpopups /usr/share/kwin/effects/fadingpopups
+mv /tmp/atp/kwin/effects/login /usr/share/kwin/effects/login
+mv /tmp/atp/kwin/effects/morphingpopups /usr/share/kwin/effects/morphingpopups
+mv /tmp/atp/kwin/effects/scale /usr/share/kwin/effects/scale
+mv /tmp/atp/kwin/effects/smodpeekeffect /usr/share/kwin/effects/smodpeekeffect
+mv /tmp/atp/kwin/effects/squash /usr/share/kwin/effects/squash
 
-# Move the new JavaScript effects
-mv /tmp/atp/KWin/js_effects/fadingpopups /usr/share/kwin/effects/fadingpopups
-mv /tmp/atp/KWin/js_effects/morphingpopups /usr/share/kwin/effects/morphingpopups
-mv /tmp/atp/KWin/js_effects/scale /usr/share/kwin/effects/scale
-mv /tmp/atp/KWin/js_effects/squash /usr/share/kwin/effects/squash
-
-# Extract the tabbox theme
-tar -xzf /tmp/atp/KWin/tabbox/thumbnail_seven.tar.gz -C /usr/share/kwin/tabbox
-
-# Replace the KWin outline
-rm -r /usr/share/kwin/outline
-tar -xzf /tmp/atp/KWin/outline/outline.tar.gz -C /usr/share/kwin
+# Themes
+mv /tmp/atp/misc/kvantum/Kvantum/Windows7Kvantum_Aero /usr/share/Kvantum/Windows7Kvantum_Aero
+tar -xzf /tmp/atp/misc/sounds/Archive.tar.gz -C /usr/share/sounds
+tar -xzf /tmp/atp/misc/icons/Windows\ 7\ Aero.tar.gz -C /usr/share/icons
+tar -xzf /tmp/atp/misc/cursors/aero-drop.tar.gz -C /usr/share/icons
