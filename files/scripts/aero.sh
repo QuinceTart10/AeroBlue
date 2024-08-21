@@ -61,3 +61,9 @@ mv /tmp/atp/kwin/effects/morphingpopups /usr/share/kwin/effects/morphingpopups
 mv /tmp/atp/kwin/effects/scale /usr/share/kwin/effects/scale
 mv /tmp/atp/kwin/effects/smodpeekeffect /usr/share/kwin/effects/smodpeekeffect
 mv /tmp/atp/kwin/effects/squash /usr/share/kwin/effects/squash
+
+# Themes
+mv /tmp/atp/misc/kvantum/Kvantum/Windows7Kvantum_Aero /usr/share/Kvantum/Windows7Kvantum_Aero
+tar -xzf /tmp/atp/misc/sounds/Archive.tar.gz -C /usr/share/sounds
+tar -xzf /tmp/atp/misc/icons/Windows\ 7\ Aero.tar.gz -C /usr/share/icons
+tar -xzf /tmp/atp/misc/cursors/aero-drop.tar.gz -C /usr/share/icons
