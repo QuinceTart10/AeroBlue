@@ -26,3 +26,6 @@ mv /tmp/atp/misc/plymouth/plymouth-theme-smod/smod-plymouth-wait-for-animation-p
 
 # Copy the Windows 7 Professional branding to the SDDM theme for consistency
 cp /usr/share/plymouth/themes/smod/assets/branding-white.png /usr/share/sddm/themes/sddm-theme-mod/Assets/branding-white.png
+
+# Change the Plymouth theme
+sed -i "s|Theme=bgrt|Theme=smod" /usr/share/plymouth/plymouthd.defaults
