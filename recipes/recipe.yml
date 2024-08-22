@@ -37,7 +37,7 @@ modules:
       # - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
     scripts:
       - aero.sh
-      - forceblur.sh
+      - smod.sh
       - plymouth.sh
       - initramfs.sh
   - type: systemd
