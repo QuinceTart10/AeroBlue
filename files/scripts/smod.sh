@@ -14,3 +14,9 @@ cd /tmp/atp/kwin/effects_cpp/kwin-effect-smodsnap-v2
 cmake -B build-kf6 -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DBUILD_KF6=ON .
 make -C build-kf6
 make -C build-kf6 install
+
+mkdir /tmp/atp/kwin/decoration/breeze-v5.93.0/build
+cd /tmp/atp/kwin/decoration/breeze-v5.93.0/build
+cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+make
+make install
