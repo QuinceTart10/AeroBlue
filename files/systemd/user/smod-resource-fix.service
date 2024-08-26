@@ -4,7 +4,7 @@ ConditionPathExists=!%h/.local/share/smod
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/ln -s /usr/share/smod "${XDG_DATA_HOME:-$HOME/.local/share}/smod"
+ExecStart=/usr/bin/ln -s /usr/share/smod ~/.local/share/smod
 
 [Install]
 WantedBy=default.target
