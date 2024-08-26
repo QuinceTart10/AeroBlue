@@ -47,7 +47,7 @@ modules:
         - smod-plymouth-wait-for-animation-poweroff.service
     user:
       enabled:
-        - smod-resource-fix.service
+        - systemd-tmpfiles-setup.service
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
