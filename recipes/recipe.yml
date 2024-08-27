@@ -33,8 +33,7 @@ modules:
       - ublue-update
   - type: script
     snippets:
-      # - "curl https://example.com/examplebinary > /usr/bin/examplebinary" # example: download binary
-      # - "ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld" # example: ld alternatives symlink workaround
+      - "git clone https://github.com/B00merang-Project/Windows-7.git /usr/share/themes/Windows-7"
     scripts:
       - aero.sh
       - smod.sh
