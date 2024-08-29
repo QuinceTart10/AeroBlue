@@ -21,16 +21,19 @@ modules:
     install:
       - kvantum
       - plymouth-plugin-script
-      # - micro
-      # - starship
+      - gum
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+  
   - type: bling
     install:
       - ublue-update
+  
+  - type: justfiles
+
   - type: script
     snippets:
       - "git clone https://github.com/B00merang-Project/Windows-7.git /usr/share/themes/Windows-7"
@@ -39,11 +42,12 @@ modules:
       - smod.sh
       - plymouth.sh
       - initramfs.sh
+  
   - type: systemd
     system:
       enabled:
-        - smod-plymouth-wait-for-animation.service
-        - smod-plymouth-wait-for-animation-poweroff.service
+        # - smod-plymouth-wait-for-animation.service
+        # - smod-plymouth-wait-for-animation-poweroff.service
     user:
       enabled:
         - systemd-tmpfiles-setup.service
