@@ -20,3 +20,10 @@ cd /tmp/atp/kwin/decoration/breeze-v5.93.0/build
 cmake -DCMAKE_INSTALL_PREFIX=/usr ..
 make
 make install
+
+# compile the sevenstart library
+mkdir /tmp/atp/plasma/plasmoids/src/sevenstart_src/build
+cd /tmp/atp/plasma/plasmoids/src/sevenstart_src/build
+cmake -DCMAKE_INSTALL_PREFIX=/usr .. 
+make 
+make install
