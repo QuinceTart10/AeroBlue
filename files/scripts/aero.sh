@@ -14,6 +14,10 @@ mv /tmp/atp/plasma/desktoptheme/Seven-Black /usr/share/plasma/desktoptheme/Seven
 mv /tmp/atp/plasma/look-and-feel/authui7 /usr/share/plasma/look-and-feel/authui7
 mv /tmp/atp/plasma/sddm/sddm-theme-mod /usr/share/sddm/themes/sddm-theme-mod
 mv /tmp/atp/plasma/smod /usr/share/smod
+mv /tmp/atp/misc/mimetype/* /usr/share/mime/packages/
+
+# Update the MIME database
+update-mime-database /usr/share/mime
 
 # Shell replacement
 rm -rf /usr/share/plasma/shells/org.kde.plasma.desktop
