@@ -33,7 +33,6 @@ rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.private.systemtray
 rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.volume
 
 # Move plasmoids
-mv /tmp/atp/plasma/plasmoids/bin /usr/share/plasma/plasmoids/bin
 mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.SevenStart /usr/share/plasma/plasmoids/io.gitgud.wackyideas.SevenStart
 mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.digitalclocklite /usr/share/plasma/plasmoids/io.gitgud.wackyideas.digitalclocklite
 mv /tmp/atp/plasma/plasmoids/io.gitgud.wackyideas.win7showdesktop /usr/share/plasma/plasmoids/io.gitgud.wackyideas.win7showdesktop
